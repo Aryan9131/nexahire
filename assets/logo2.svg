@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" fill="none">
+  <!-- Mic Icon (simplified, balanced) -->
+  <g transform="translate(20,25)">
+    <!-- Mic body -->
+    <rect x="0" y="0" width="40" height="55" rx="20" fill="#2563EB"/>
+    <!-- Mic slots -->
+    <rect x="12" y="15" width="16" height="5" rx="2.5" fill="white"/>
+    <rect x="12" y="27" width="16" height="5" rx="2.5" fill="white"/>
+    <rect x="12" y="39" width="16" height="5" rx="2.5" fill="white"/>
+    <!-- Mic stand -->
+    <path d="M20 55 v12 a15 15 0 0 0 15 15 h-30 a15 15 0 0 0 15 -15 v-12z" fill="#2563EB"/>
+  </g>
+
+  <!-- Brand Name -->
+  <text x="90" y="55" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="700" fill="#111">
+    Nexa<tspan fill="#2563EB">Hire</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text x="90" y="85" font-family="Inter, Arial, sans-serif" font-size="16" fill="#4B5563">
+    Next-Gen AI Recruiter Voice Agent
+  </text>
+</svg>
