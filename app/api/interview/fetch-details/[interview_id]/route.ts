@@ -1,12 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 import { supabase } from "@/integrations/supabase/client";
 
+// Define the context type for Next.js 15
+interface RouteContext {
+  params: Promise<{ interview_id: string }>;
+}
+
 export async function GET(
   req: NextRequest,
-  { params }: { params: { interview_id: string } }
+  context: RouteContext
 ) {
   try {
-    const { interview_id } = params;
+    // Await the params in Next.js 15
+    const { interview_id } = await context.params;
 
     console.log("Fetching interviews for user:", interview_id);
 
