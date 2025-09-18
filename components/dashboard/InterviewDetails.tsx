@@ -9,8 +9,8 @@ const InterviewDetails = ({ interviewId }: { interviewId: string | undefined }) 
   console.log("interview id coming is : ", interviewId)
 
   const handleCopyLink = () => {
-    navigator.clipboard.writeText(`http://localhost:3000/interview/${interviewId}`);
-    console.log(`Copied: http://localhost:3000/interview/${interviewId}`);
+    navigator.clipboard.writeText(`${process.env.NEXT_PUBLIC_FRONTEND_BASE_URL}/interview/${interviewId}`);
+    console.log(`Copied: ${process.env.NEXT_PUBLIC_FRONTEND_BASE_URL}/interview/${interviewId}`);
     toast("Interview link copied to clipboard!");
   }
   return (
@@ -29,7 +29,7 @@ const InterviewDetails = ({ interviewId }: { interviewId: string | undefined }) 
         </div>
         <div className='flex justify-between items-center my-2'>
           <div className='flex-1 bg-gray-100 border border-gray-200 p-2 rounded-lg mr-3'>
-            <p className='text-sm text-gray-600'>http://localhost:3000/interview/{interviewId}</p>
+            <p className='text-sm text-gray-600'>{process.env.NEXT_PUBLIC_FRONTEND_BASE_URL}/interview/{interviewId}</p>
           </div>
           <Button variant="outline" className='cursor-pointer' onClick={handleCopyLink}> <Copy /> Copy Link</Button>
         </div>

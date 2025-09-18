@@ -30,8 +30,8 @@ const ScheduledInterviews = () => {
     const router = useRouter();
     const [scheduledInterviews, setScheduledInterviews] = React.useState<ScheduledInterview[]>([]);
     const handleCopyLink = (interviewId: number) => {
-        navigator.clipboard.writeText(`http://localhost:3000/interview/${interviewId}`);
-        console.log(`Copied: http://localhost:3000/interview/${interviewId}`);
+        navigator.clipboard.writeText(`${process.env.NEXT_PUBLIC_FRONTEND_BASE_URL}/interview/${interviewId}`);
+        console.log(`Copied: ${process.env.NEXT_PUBLIC_FRONTEND_BASE_URL}/interview/${interviewId}`);
         toast("Interview link copied to clipboard!");
     }
 

@@ -1,11 +1,21 @@
 import { supabase } from "@/integrations/supabase/client";
 import { NextResponse } from "next/server";
 
+// Correct type definition for Next.js 15
+type Params = {
+  user_id: string;
+};
 
-export async function GET(req: Request, { params }: { params: { user_id: string } }) {
-    try {
-        const { user_id } = params;
-        console.log("Fetching interviews for user:", user_id);
+  
+
+export async function GET(
+  req: Request,
+  { params }: { params: Promise<Params> }
+) {
+  try {
+        // Await the params promise in Next.js 15
+          const { user_id } = await params;
+          console.log("Fetching interviews for user:", user_id);
         // Fetch interviews for the user from the supabase database
         const { data: interviews, error } = await supabase
             .from('Interviews')
