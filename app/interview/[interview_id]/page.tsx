@@ -50,7 +50,7 @@ const page = () => {
         types: data.types,
         userId: data.userId,
         questions: data.questions,
-        createdAt: data.createdAt,
+        created_at: data.createdAt,
       });
     } catch (error) {
       console.error('Error fetching interview details:', error);

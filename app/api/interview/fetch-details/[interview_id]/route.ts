@@ -1,7 +1,6 @@
 import { supabase } from "@/integrations/supabase/client";
 import { NextResponse } from "next/server";
 
-
 export async function GET(req: Request, { params }: { params: { interview_id: string } }) {
     try {
         const { interview_id } = params;
